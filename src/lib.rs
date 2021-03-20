@@ -10,6 +10,7 @@ pub enum Error {
     ShopNotFound,
 }
 
+#[derive(Clone)]
 pub struct Credentials {
     pub api_key: String,
     pub secret: String,
@@ -24,6 +25,7 @@ impl Credentials {
     }
 }
 
+#[derive(Clone, Copy)]
 pub enum AccessMode {
     Offline,
     Online,
@@ -38,6 +40,7 @@ impl AccessMode {
     }
 }
 
+#[derive(Clone)]
 pub struct ShopifyApp {
     pub access_mode: AccessMode,
     pub auth_callback_uri: String,
